@@ -1,0 +1,12 @@
+{% include "header.html" %}
+<div class="item">
+  <h2 class="inline" style="color:#ff3333">{{items.name}}</h2>
+  &nbsp&nbsp
+  <h3 class="inline"><a href = "{{url_for('showCategories', categories_id=categories.id)}}" style="color:#ff3333">- {{categories.name}}</a></h3>
+  <h3 class="description" style="color:#330033">{{items.description}}</h3>
+</div>
+<footer>
+  
+</footer>
+</body>
+</html>

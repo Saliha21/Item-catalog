@@ -1,0 +1,26 @@
+{% include "header.html" %}
+<center>
+<h1 class="header" style="color:#ff3333"> New book </h1>
+<div class="new">
+<form action="{{url_for('newItem')}}"
+  method="POST">
+  <p>Name:</p>
+  <input type="text" size="30" name="name" required>
+  <p>description:</p>
+  <input type="text" size="30" name="description" required>
+  <p>Authors:</p>
+  <select name="categories_id" required>
+    <option value=1 >Gabriel Garcia Marquez</option>
+    <option value=2 >Agatha Christie</option>
+    <option value=3 >William Shakespeare</option>
+    <option value=4 >Margaret Mitchell</option>
+  </select>
+  </br></br>
+  <input type="submit" value ="Create">
+  <a href = "{{url_for('showCatalog')}}"><button type="button">Cancel</button></a>
+  </br></br>
+</form></div></center>
+<footer class="footer">
+</footer>
+</body>
+</html>

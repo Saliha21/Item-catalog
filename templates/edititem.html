@@ -1,0 +1,27 @@
+{% include "header.html" %}
+<center>
+<h1 class="header" style="color:#ff3333">Edit book informations </h1>
+<div class="edit"> 
+<form action="{{url_for('editCategories' ,categories_id=categories_id, items_id=items_id, item=editedItem)}}"
+  method="POST">
+  <p>Name:</p>
+  <input type="text" size="30" name="name" placeholder = '{{item.name}}'>
+  <p>Description:</p>
+  <input type="text" size="30"  name="description" placeholder = '{{item.description}}'>
+  <p>authors:</p>
+  <select name="categories_id">
+    <option value="" selected="selected"></option>
+    <option value=1 >Gabriel Garcia Marquez</option>
+    <option value=2 >Agatha Christie</option>
+    <option value=3 >William Shakespeare</option>
+    <option value=4 >Margaret Mitchell</option>
+  </select>
+  </br></br>
+  <input type="submit" value ="Update">
+  <a href = "{{url_for('showItem',categories_id=categories_id, items_id=items_id)}}"><button type="button">Cancel</button></a>
+  </br></br>
+</form></div></center>
+<footer class="footer">
+</footer>
+</body>
+</html>

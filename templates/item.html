@@ -1,0 +1,15 @@
+{% include "header.html" %}
+<div class="item">
+  <h2 class="inline" style="color:#ff3333" >{{items.name}}</h2>
+  </br>
+  <h3 class="inline"><a href = "{{url_for('showCategories', categories_id=categories.id)}}" style="color:#ff3333">- {{categories.name}}</a></h3>
+  </br>
+  <h3 class="description" style="color:#330033" >{{items.description}}</h3>
+  </br></br></br>
+  <a href = "{{url_for('editCategories', categories_id=categories.id, items_id=items.id)}}" style="color:#ff3333">Edit</a>&nbsp&nbsp&nbsp
+  <a href = "{{url_for('deleteCategories', categories_id=categories.id, items_id=items.id)}}" style="color:red">Delete</a>
+</div>
+<footer>
+</footer>
+</body>
+</html>
